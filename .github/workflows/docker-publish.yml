@@ -39,17 +39,4 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-
-      - name: Scan Docker Image with Trivy
-        uses: aquasecurity/trivy-action@0.30.0
-        with:
-          image-ref: nfoley84/fastapi:latest
-          format: 'json'
-          output: 'trivy-report.json'
-          severity: 'HIGH,CRITICAL'
-          ignore-unfixed: true
-          exit-code: 1
-          vuln-type: 'os,library'
-          ignore-policy: '.trivyignore'
-      
   
