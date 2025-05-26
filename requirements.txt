@@ -1,0 +1,12 @@
+fastapi
+httpx
+uvicorn
+prison
+pydantic-settings
+python-dotenv
+pytest 
+pytest-mock
+pytest-httpx
+mangum
+boto3
+requests
