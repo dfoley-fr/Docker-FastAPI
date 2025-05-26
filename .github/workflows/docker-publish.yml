@@ -43,7 +43,7 @@ jobs:
       - name: Scan Docker Image with Trivy
         uses: aquasecurity/trivy-action@0.30.0
         with:
-          image-ref: ${{ env.IMAGE_NAME }}:${{ steps.meta.outputs.tags }}
+          image-ref: nfoley84/fastapi:latest
           format: 'json'
           output: 'trivy-report.json'
           severity: 'HIGH,CRITICAL'
