@@ -51,8 +51,5 @@ jobs:
           exit-code: 1
           vuln-type: 'os,library'
           ignore-policy: '.trivyignore'
-          
-      - name: Upload Trivy report
-        uses: actions/upload-artifact@v3
-        with:
-          name: trivy-report
+      
+  
